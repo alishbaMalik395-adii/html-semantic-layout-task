@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Layout Replicated</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+            background-color: #ffffff; 
+            display: flex;
+            justify-content: center; 
+            padding: 20px;
+        }
+
+        
+        section#main-layout-container {
+            width: 100%;
+            max-width: 1200px;
+            background-color: #e4e7eb; 
+            border: 1px solid #D1D5DB; 
+            display: flex;
+            flex-direction: column;
+            gap: 10px; 
+            padding: 10px; 
+        }
+
+        
+        header, nav, aside, article, footer {
+            background-color: #aeb6be; 
+            border: 1px solid #E5E7EB; 
+            color: #747c88; 
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            font-size: 16px;
+            font-weight: normal; 
+            letter-spacing: 0.5px;
+        }
+
+        
+        header {
+            height: 80px;
+            font-size: 18px; 
+        }
+
+        
+        nav {
+            height: 60px;
+        }
+
+        
+        main#central-grid {
+            display: grid;
+            grid-template-columns: 220px 1fr 220px; 
+            gap: 10px; 
+            min-height: 400px; 
+        }
+
+        
+        #central-grid aside, #central-grid article {
+            background-color: #afb4b9;
+            border: 1px solid #E5E7EB;
+            color: #36485f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            min-height: 400px;
+        }
+
+        
+        #central-grid aside {
+            width: 220px;
+        }
+
+        
+        #central-grid article {
+            flex-grow: 1; 
+        }
+
+        
+        footer {
+            height: 60px;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <section id="main-layout-container">
+
+        <!-- HEADER BLOCK -->
+        <header>
+            Header
+        </header>
+
+        <!-- NAVIGATION MENU BLOCK -->
+        <nav>
+            Navigation Menu
+        </nav>
+
+        
+        <main id="central-grid">
+            
+            <!-- LEFT CONTENT COLUMN -->
+            <aside>
+                Content
+            </aside>
+
+            <!-- CENTER MAIN CONTENT COLUMN -->
+            <article>
+                Main Content
+            </article>
+
+            <!-- RIGHT CONTENT COLUMN -->
+            <aside>
+                Content
+            </aside>
+
+        </main>
+
+        <!-- FOOTER BLOCK -->
+        <footer>
+            Footer
+        </footer
+
+    </section>
+
+</body>
+</html>
